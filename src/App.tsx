@@ -1,8 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import {useFonts, Poppins_300Light, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_800ExtraBold } from '@expo-google-fonts/poppins'
+import {DMSerifDisplay_400Regular} from '@expo-google-fonts/dm-serif-display'
+import {DMSans_400Regular} from '@expo-google-fonts/dm-sans';
 export default function App() {
+    const [fontsLoaded] = useFonts({
+        Poppins_300Light, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_800ExtraBold, DMSerifDisplay_400Regular, DMSans_400Regular
+    })
+    if (!fontsLoaded) {
+        return null;
+      }
+
     return (
         <View style={styles.container}>
             <Text>Open up App.js to start working on your app!</Text>
