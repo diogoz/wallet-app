@@ -8,7 +8,7 @@ export const Button = styled(RectButton)`
     align-items: center;
     justify-content: center;
     border-radius: ${RFValue(15)}px;
-    background-color: ${({ theme }) => theme.COLORS.GRAY6};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUNDLIGHT};
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
     flex-direction: row;
 `;

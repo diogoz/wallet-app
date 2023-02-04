@@ -8,12 +8,12 @@ interface Props extends RectButtonProps {
     title: string;
 }
 
-const SignInGoogleButton: React.FC<Props> = ({ title, ...rest }) => {
+const SignInGoogleButton = () => {
     return (
         <View>
-            <Button {...rest}>
+            <Button>
                 <GoogleIcon source={GoogleLogo} />
-                <ButtonTitle>{title}</ButtonTitle>
+                <ButtonTitle>Google</ButtonTitle>
             </Button>
         </View>
     );

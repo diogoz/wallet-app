@@ -1,5 +1,4 @@
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
     Container,
     ContentBody,
@@ -13,21 +12,19 @@ import SignInGoogleButton from "../../components/SignInGoogleButton";
 
 const Login = () => {
     return (
-        <SafeAreaView>
-            <Container>
-                <ContentHeader>
-                    <Title>Welcome back {"\n"} to Mabank Wallet</Title>
-                    <Description>Sign up with</Description>
-                    <ViewButton>
-                        <SignInGoogleButton title="Google" />
-                    </ViewButton>
-                </ContentHeader>
+        <Container>
+            <ContentHeader>
+                <Title>Welcome back {"\n"} to Mabank Wallet</Title>
+                <Description>Sign up with</Description>
+                <ViewButton>
+                    <SignInGoogleButton />
+                </ViewButton>
+            </ContentHeader>
 
-                <ContentBody></ContentBody>
+            <ContentBody></ContentBody>
 
-                <ContentFooter></ContentFooter>
-            </Container>
-        </SafeAreaView>
+            <ContentFooter></ContentFooter>
+        </Container>
     );
 };
 

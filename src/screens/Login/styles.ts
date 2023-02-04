@@ -1,12 +1,12 @@
 import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
-export const Container = styled.View`
-    margin-top: ${RFValue(80)}px;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND};
+import { SafeAreaView } from "react-native-safe-area-context";
+export const Container = styled(SafeAreaView)`
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
 `;
 
 export const ContentHeader = styled.View`
-    padding: ${RFValue(32)}px;
+    margin-top: ${RFValue(110)}px;
     justify-content: center;
     align-items: center;
 `;
