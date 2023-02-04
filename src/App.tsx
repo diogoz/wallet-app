@@ -1,41 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {useFonts,
-    Poppins_300Light,
-    Poppins_400Regular,
-    Poppins_500Medium,
-    Poppins_700Bold,
-    Poppins_800ExtraBold
- } from '@expo-google-fonts/poppins';
-import {DMSerifDisplay_400Regular} from '@expo-google-fonts/dm-serif-display';
-import {DMSans_400Regular} from '@expo-google-fonts/dm-sans';
-import { ThemeProvider } from 'styled-components/native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { useFonts, Quicksand_500Medium } from "@expo-google-fonts/quicksand";
+import { Rubik_500Medium } from "@expo-google-fonts/rubik";
+import { ThemeProvider } from "styled-components/native";
 import theme from "../src/styles/theme";
+import Login from "./screens/Login";
 export default function App() {
     const [fontsLoaded] = useFonts({
-        Poppins_300Light, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_800ExtraBold, DMSerifDisplay_400Regular, DMSans_400Regular
-    })
+        Rubik_500Medium,
+        Quicksand_500Medium,
+    });
     if (!fontsLoaded) {
         return null;
-      }
+    }
 
     return (
         <ThemeProvider theme={theme}>
-            <StatusBar style='dark'  translucent backgroundColor='transparent' />
-        <View style={styles.container}>
-            <Text>wallet app</Text>
-            <StatusBar style="auto" />
-        </View>
+            <StatusBar style="dark" translucent backgroundColor="transparent" />
+            <View>
+                <Login />
+            </View>
         </ThemeProvider>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: theme.COLORS.ORANGE,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-});
