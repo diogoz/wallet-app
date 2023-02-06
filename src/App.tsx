@@ -1,12 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 import { useFonts, Quicksand_500Medium } from "@expo-google-fonts/quicksand";
 import { Rubik_500Medium } from "@expo-google-fonts/rubik";
 import { ThemeProvider } from "styled-components/native";
 import theme from "../src/styles/theme";
 import Login from "./screens/Login";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
 export default function App() {
     const [fontsLoaded] = useFonts({
         Rubik_500Medium,
