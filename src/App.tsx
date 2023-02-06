@@ -6,6 +6,7 @@ import { Rubik_500Medium } from "@expo-google-fonts/rubik";
 import { ThemeProvider } from "styled-components/native";
 import theme from "../src/styles/theme";
 import Login from "./screens/Login";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 export default function App() {
     const [fontsLoaded] = useFonts({
         Rubik_500Medium,

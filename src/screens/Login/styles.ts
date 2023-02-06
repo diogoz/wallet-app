@@ -28,7 +28,9 @@ export const Description = styled.Text`
     margin-bottom: ${RFValue(20)}px;
 `;
 
-export const ViewButton = styled.View``;
+export const ViewButton = styled.View`
+    flex-direction: row;
+`;
 
 export const ContentBody = styled.View``;
 

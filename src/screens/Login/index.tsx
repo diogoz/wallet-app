@@ -9,6 +9,7 @@ import {
     ViewButton,
 } from "./styles";
 import SignInGoogleButton from "../../components/SignInGoogleButton";
+import SignInFacebookButton from "../../components/SignInFacebookButton";
 
 const Login = () => {
     return (
@@ -17,7 +18,8 @@ const Login = () => {
                 <Title>Welcome back {"\n"} to Mabank Wallet</Title>
                 <Description>Sign up with</Description>
                 <ViewButton>
-                    <SignInGoogleButton />
+                    <SignInGoogleButton title="Google" />
+                    <SignInFacebookButton title="Facebook" />
                 </ViewButton>
             </ContentHeader>
 
